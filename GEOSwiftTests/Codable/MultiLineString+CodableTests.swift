@@ -4,7 +4,7 @@ import GEOSwift
 extension MultiLineString {
     static let testValue = MultiLineString(
         lineStrings: [.testValue1, .testValue5])
-    static let testJson = #"{"coordinates":[[[1,2],[3,4]],[[5,6],[7,8]]],"type"#
+    static let testJson = #"{"coordinates":[[[1,2,3],[3,4,0]],[[5,6,0],[7,8,0]]],"type"#
         + #"":"MultiLineString"}"#
 }
 

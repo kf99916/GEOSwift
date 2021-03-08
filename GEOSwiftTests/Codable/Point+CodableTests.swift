@@ -2,8 +2,8 @@ import XCTest
 import GEOSwift
 
 extension Point {
-    static let testValue1 = Point(x: 1, y: 2)
-    static let testJson1 = #"{"coordinates":[1,2],"type":"Point"}"#
+    static let testValue1 = Point(x: 1, y: 2, z: 3)
+    static let testJson1 = #"{"coordinates":[1,2,3],"type":"Point"}"#
 
     static let testValue3 = Point(x: 3, y: 4)
 

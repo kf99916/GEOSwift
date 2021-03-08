@@ -3,7 +3,7 @@ import GEOSwift
 
 extension MultiPoint {
     static let testValue = MultiPoint(points: [.testValue1, .testValue3])
-    static let testJson = #"{"coordinates":[[1,2],[3,4]],"type":"MultiPoint"}"#
+    static let testJson = #"{"coordinates":[[1,2,3],[3,4,0]],"type":"MultiPoint"}"#
 }
 
 @available(iOS 11.0, macOS 10.13, tvOS 11.0, *)

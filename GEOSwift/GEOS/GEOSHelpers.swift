@@ -24,11 +24,15 @@ func makePoints(from geometry: GEOSObject) throws -> [Point] {
         throw GEOSError.libraryError(errorMessages: geometry.context.errors)
     }
     return try Array(0..<count).map { (index) -> Point in
-        var point = Point(x: 0, y: 0)
+        var point = Point(x: 0, y: 0, z: 0)
         // returns 0 on exception
         guard GEOSCoordSeq_getX_r(geometry.context.handle, sequence, index, &point.x) != 0,
             GEOSCoordSeq_getY_r(geometry.context.handle, sequence, index, &point.y) != 0 else {
                 throw GEOSError.libraryError(errorMessages: geometry.context.errors)
+        }
+        
+        if GEOSCoordSeq_getZ_r(geometry.context.handle, sequence, index, &point.z) != 0 {
+            point.z = 0
         }
         return point
     }

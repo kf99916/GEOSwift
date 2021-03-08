@@ -31,13 +31,13 @@ extension GEOSwift.Polygon {
     static let testValueWithHole = GEOSwift.Polygon(
         exterior: .testValueExterior2,
         holes: [.testValueHole1])
-    static let testJsonWithHole = #"{"coordinates":[[[2,2],[-2,2],[-2,-2],[2,-"#
-        + #"2],[2,2]],[[1,1],[1,-1],[-1,-1],[-1,1],[1,1]]],"type":"Polygon"}"#
+    static let testJsonWithHole = #"{"coordinates":[[[2,2,0],[-2,2,0],[-2,-2,0],[2,-"#
+        + #"2,0],[2,2,0]],[[1,1,0],[1,-1,0],[-1,-1,0],[-1,1,0],[1,1,0]]],"type":"Polygon"}"#
 
     static let testValueWithoutHole = GEOSwift.Polygon(
         exterior: .testValueExterior7)
-    static let testJsonWithoutHole = #"{"coordinates":[[[7,2],[3,2],[3,-2],[7,"#
-        + #"-2],[7,2]]],"type":"Polygon"}"#
+    static let testJsonWithoutHole = #"{"coordinates":[[[7,2,0],[3,2,0],[3,-2,0],[7,"#
+        + #"-2,0],[7,2,0]]],"type":"Polygon"}"#
 }
 
 @available(iOS 11.0, macOS 10.13, tvOS 11.0, *)

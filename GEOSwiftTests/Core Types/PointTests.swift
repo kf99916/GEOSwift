@@ -3,9 +3,10 @@ import GEOSwift
 
 final class PointTests: XCTestCase {
     func testInitWithLonLat() {
-        let point = Point(x: 1, y: 2)
+        let point = Point(x: 1, y: 2, z: 3)
 
         XCTAssertEqual(point.x, 1)
         XCTAssertEqual(point.y, 2)
+        XCTAssertEqual(point.z, 3)
     }
 }
