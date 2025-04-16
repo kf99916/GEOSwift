@@ -1,3 +1,69 @@
+## 11.2.0
+
+* [#264](https://github.com/GEOSwift/GEOSwift/pull/264) Add initial support for prepared geometry
+
+## 11.1.0
+
+* [#290](https://github.com/GEOSwift/GEOSwift/pull/290) Add `LineStringConvertible.substring(fromFraction:toFraction:)`
+
+## 11.0.0
+
+* [#284](https://github.com/GEOSwift/GEOSwift/pull/284) Update GEOS, CI, and Apple Platform Versions
+* [#285](https://github.com/GEOSwift/GEOSwift/pull/285) Fix crash in polygonize()
+
+## 10.3.0
+
+* [#281](https://github.com/GEOSwift/GEOSwift/pull/281) Add `GeometryConvertible.lineMergeDirected()` and `GeometryConvertible.lineMerge()`
+* [#282](https://github.com/GEOSwift/GEOSwift/pull/282) Add `GeometryConvertible.offsetCurve(width:quadsegs:joinStyle:mitreLimit:)`
+
+## 10.2.0
+
+* [#271](https://github.com/GEOSwift/GEOSwift/pull/271) Expose `GeometryConvertible.bufferWithStyle(width:quadsegs:endCapStyle:joinStyle:mitreLimit:)`
+* [#274](https://github.com/GEOSwift/GEOSwift/pull/274) Treat lint warnings as errors in CI
+
+## 10.1.0
+
+* [#259](https://github.com/GEOSwift/GEOSwift/pull/259) Expose
+  `GeometryConvertible.makeValid(method:)`.
+* Fix warnings when building tests with Xcode 14.3.
+
+## 10.0.0
+
+* [#250](https://github.com/GEOSwift/GEOSwift/pull/250) Add
+  `GeometryConvertible.snap(to:)`.
+* [#255](https://github.com/GEOSwift/GEOSwift/pull/255) Add
+  `GeometryConvertible.hausdorffDistance(to:)` and
+  `GeometryConvertible.hausdorffDistance(to:densifyFraction:)`.
+* [#256](https://github.com/GEOSwift/GEOSwift/issues/256) Add
+  `GeometryConvertible.concaveHull(withRatio:allowHoles:)`.
+* [#247](https://github.com/GEOSwift/GEOSwift/issues/247) Add
+  `Sendable` conformances and more `Hashable` conformances.
+* Update to GEOSwift/geos 8.1.0 (geos 3.11.2)
+
+## 9.0.0
+
+* [#224](https://github.com/GEOSwift/GEOSwift/pull/224)
+  `GeometryConvertible.buffer(by:)` can now be used with negative widths.
+* [#232](https://github.com/GEOSwift/GEOSwift/pull/232) Dependency and tooling
+  support updates:
+    * Updates to GEOSwift/geos 7.0.0 (libgeos/geos 3.10.1)
+    * Increases swift-tools-version to 5.3 (corresponds to Xcode 12)
+    * Drops support for Carthage
+    * Reorganizes sources to match Swift Package Manager conventions
+* [#235](https://github.com/GEOSwift/GEOSwift/pull/235) Added
+  `GeometryConvertible.symmetricDifference(with:)`
+* [#236](https://github.com/GEOSwift/GEOSwift/pull/236) Updated
+  `LineStringConvertible` methods to use implementations from geos:
+    * `normalizedDistanceFromStart(toProjectionOf:)`: The geos implementation
+      returns 0 for 0-length lines, whereas the old GEOSwift implementation
+      threw `GEOSwiftError.lengthIsZero`, which has now been removed.
+    * `interpolatedPoint(withFraction:)`
+
+## 8.1.0
+
+* [#218](https://github.com/GEOSwift/GEOSwift/pull/218) Added
+  `GeometryConvertible.simplify(withTolerance:)`
+
 ## 8.0.2
 
 * [#216](https://github.com/GEOSwift/GEOSwift/issues/216) Changed the value of
@@ -58,8 +124,9 @@
     * Add support for Swift PM on iOS and tvOS (Fixes
       [#166](https://github.com/GEOSwift/GEOSwift/issues/166))
     * Update Swift PM support on macOS and Linux to build geos from source
-      instead of using system packages. This provides increased consistency with
-      CocoaPods and Carthage and enables us to support iOS and tvOS as well.
+      instead of using system packages. This provides increased consistency
+      with CocoaPods and Carthage and enables us to support iOS and tvOS as
+      well.
 
 ## 5.2.0
 
@@ -83,8 +150,8 @@
 
 ## 4.1.1
 
-* [#163](https://github.com/GEOSwift/GEOSwift/pull/163) Fix building on projects
-  with spaces in path
+* [#163](https://github.com/GEOSwift/GEOSwift/pull/163) Fix building on
+  projects with spaces in path
 * [#164](https://github.com/GEOSwift/GEOSwift/pull/164) Updated geos dependency
   to 4.0.2 (CocoaPods & Carthage)
 
